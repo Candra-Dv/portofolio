@@ -11,7 +11,7 @@
   font-family: 'Bitter', 'serif';
 }
 
-:root{
+:root {
   --bg-color: #081b29;
   --second-bg-color: #02a2f8;
   --third-bg-color: #112e42;
@@ -33,7 +33,7 @@ body {
   background-color: rgba(255, 255, 255, 0.5); */
 }
 
-.navbar a{
+.navbar a {
   color: var(--text-color);
 }
 
@@ -43,13 +43,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
-    to right,
-    var(--bg-color) 0%,
-    var(--bg-color) 70%,
-    var(--second-bg-color) 50%,
-    var(--second-bg-color) 100%
-  );
+  background: linear-gradient(to right,
+      var(--bg-color) 0%,
+      var(--bg-color) 70%,
+      var(--second-bg-color) 50%,
+      var(--second-bg-color) 100%);
 }
 
 .jb-txt {
@@ -103,7 +101,7 @@ body {
 }
 
 @keyframes homeText {
-  
+
   0%,
   10%,
   100% {
@@ -117,7 +115,7 @@ body {
 }
 
 @keyframes homeCursorText {
-  
+
   0%,
   10%,
   100% {
@@ -182,7 +180,7 @@ body {
   font-weight: 700;
 }
 
-.home-img{
+.home-img {
   position: relative;
   width: 18rem;
   height: 21rem;
@@ -190,7 +188,7 @@ body {
   z-index: 2;
 }
 
-.img-fluid{
+.img-fluid {
   position: relative;
   width: 18rem;
   height: 20rem;
@@ -198,7 +196,7 @@ body {
   z-index: 2;
 }
 
-.dot{
+.dot {
   position: absolute;
   margin-top: -3rem;
   margin-left: 23rem;
@@ -206,7 +204,7 @@ body {
   width: 40%;
 }
 
-.dot-verti{
+.dot-verti {
   position: absolute;
   margin-left: 28rem;
   margin-top: 10rem;
@@ -214,7 +212,7 @@ body {
   width: 40%;
 }
 
-.dot2{
+.dot2 {
   position: absolute;
   width: 40%;
   margin-top: -4rem;
@@ -299,7 +297,8 @@ span {
 .about-content p {
   font-size: 1rem;
   margin: 0 10rem;
-  font-family: 'Nunito', sans-serif;;
+  font-family: 'Nunito', sans-serif;
+  ;
 }
 
 /* section skill */
@@ -317,7 +316,7 @@ span {
   text-align: center;
 }
 
-.skill span{
+.skill span {
   color: var(--second-bg-color);
 }
 
@@ -327,16 +326,16 @@ span {
   justify-content: center;
 }
 
-.card {
-  width: 200px;
-  padding: 20px;
-  margin-right: 20px;
+.skill .card {
+  width: 12rem;
+  padding: 1rem;
+  margin-right: 1rem;
   background-color: var(--bg-color);
   border: 6px solid var(--second-bg-color);
   box-shadow: 0 4px 8px rgb(0, 0, 0);
 }
 
-.card img {
+.skill .card img {
   width: 80%;
   height: auto;
   margin: auto;
@@ -445,6 +444,118 @@ span {
 }
 
 /* Section Portofolio */
-.portofolio{
+.portofolio {
   margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.portofolio .heading{
+  margin-bottom: 3rem;
+}
+
+.portofolio p{
+  font-family: 'Nunito', sans-serif;
+  color: var(--third-bg-color);
+  width: 16rem;
+  font-weight: 500;
+}
+
+.portofolio h1{
+  font-size: 1.2rem;
+  color: var(--third-bg-color);
+}
+
+.container .box {
+  position: relative;
+  margin-right: 20px;
+  margin-bottom: 2rem;
+  transition: all .3s ease-out;
+  will-change: transform;
+  transform: rotateX(7deg) rotateZ(-4deg) rotateY(13deg) scale3d(1, 1, -0.9);
+}
+
+.container .box img {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.box .porto-content{
+  position: absolute;
+  width: 22rem;
+  height: 11rem;
+  margin-top: -11rem;
+  padding-top: 3rem;
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  opacity: 0;
+}
+
+.box:hover .porto-content{
+  bottom: 0;
+  opacity: 1;
+}
+
+.box:hover .cover {
+  transform: translateY(-14px) scale(1.04);
+}
+
+.cover {
+  transition: all 400ms ease-in-out;
+  will-change: transform;
+}
+
+.cover img {
+  transition: all 260ms ease-in-out;
+}
+
+.box .cover::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 1rem;
+  left: -1rem;
+  display: block;
+  width: 20rem;
+  height: 12rem;
+  opacity: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(30px);
+  transition: all 260ms ease-in-out;
+  will-change: transform;
+  /* transform: scale(.6); */
+}
+
+.box:hover .cover::after {
+  opacity: 1;
+  transform: scale(1);
+
+}
+
+.box-1 .cover::after {
+  background-image: url('/assets/img/project1.png');
+}
+
+.box-2 .cover::after {
+  background-image: url('/assets/img/project2.png');
+}
+
+.box-3 .cover::after {
+  background-image: url('/assets/img/project3.jpg');
+}
+
+.box-4 .cover::after {
+  background-image: url('/assets/img/project4.png');
+}
+
+.box-5 .cover::after {
+  background-image: url('/assets/img/project6.png');
+}
+
+.box-6 .cover::after {
+  background-image: url('/assets/img/project7.png');
 }
