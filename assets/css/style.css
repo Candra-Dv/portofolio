@@ -597,7 +597,6 @@ span {
   transform: translateX(10px);
 }
 
-
 .contact-icon i{
   height: 2rem;
   width: 2rem;
@@ -665,4 +664,9 @@ form textarea{
   margin-left: auto;
   color: var(--text-color);
   background-color: #02a2f8;
+}
+
+.footer .top i:hover{
+  background-color: var(--text-color);
+  color: var(--second-bg-color);
 }
