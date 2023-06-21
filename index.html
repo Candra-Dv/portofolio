@@ -20,7 +20,7 @@
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">Candra.</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                <i class='bx bx-menu' ></i>
+                <i class='bx bx-menu'></i>
             </button>
             <div class="collapse navbar-collapse justify-content-end fw-bold" id="collapsibleNavbar">
                 <ul class="navbar-nav" id="navbar-nav">
@@ -48,7 +48,7 @@
     <section id="section-home">
         <div class="jumbotron bg-body-tertiary overflow-hidden">
             <div class="row">
-                <div class="jb-txt col-md-5">
+                <div class="jb-txt col-md-5 bounce">
                     <h2>Hi, I'm</h2>
                     <h1>Candra Dermawansyah</h1>
                     <div class="txt-animasi">
@@ -59,7 +59,7 @@
                         developer</p>
                     <a href="#" class="btn">Hire Me</a>
                 </div>
-                <div class="home-img col-md-5">
+                <div class="home-img col-md-5 hidden">
                     <span class="square-spin"></span>
                     <img src="/assets/img/dot.svg" class="dot" alt="">
                     <img src="/assets/img/dots_vertical.svg" class="dot-verti" alt="">
@@ -73,12 +73,15 @@
     <!-- section about -->
     <section id="section-about">
         <div class="about">
-            <h2 class="heading">About <span>Me</span></h2>
-            <div class="about-img">
+            <div class="hidden">
+                <p>Introduction</p>
+                <h2 class="heading">About <span>Me</span></h2>
+            </div>
+            <div class="about-img hidden">
                 <img src="/assets/img/PP2.jpg" alt="">
                 <span class="circle-spin"></span>
             </div>
-            <div class="about-content">
+            <div class="about-content hidden">
                 <p>I am a student of Informatics Engineering at Sekolah Tinggi
                     Teknologi Bandung. Currently, I am actively involved in my studies, learning new things and
                     expanding my knowledge. Throughout my college years, I have acquired expertise in various areas of
@@ -94,50 +97,54 @@
     <!-- section skill -->
     <section id="section-skill">
         <div class="skill">
-            <h2 class="heading">My&nbsp;<span>Skills</span></h2>
+            <div class="hidden">
+                <p>Here are my skills</p>
+                <h2 class="heading">My&nbsp;<span>Skills</span></h2>
+            </div>
+            <h3 class="heading-txt hidden">Below are some of the skills I have mastered with varying levels of expertise:</h3>
             <div class="container">
-                <div class="card mb-4">
+                <div class="card bounce mb-4">
                     <img src="/assets/img/html.png" class="card-img-top p-1" alt="...">
                     <div class="card-body">
                         <h2 class="card-title mb-3 text-center">HTML</h2>
                         <div class="progress">
-                            <span class="html"></span>
+                            <span class="html bounce"></span>
                         </div>
                     </div>
                 </div>
-                <div class="card mb-4">
+                <div class="card bounce mb-4">
                     <img src="/assets/img/css.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h2 class="card-title mb-3 text-center">CSS</h2>
                         <div class="progress">
-                            <span class="css"></span>
+                            <span class="css bounce"></span>
                         </div>
                     </div>
                 </div>
-                <div class="card mb-4">
-                    <img src="/assets/img/bs.png" class="card-img-top p-1" alt="...">
+                <div class="card bounce mb-4">
+                    <img src="/assets/img/pyhton.png" class="card-img-top p-1" alt="...">
                     <div class="card-body">
-                        <h2 class="card-title mb-3 text-center">bootstrap</h2>
+                        <h2 class="card-title mb-3 text-center">Pyhton</h2>
                         <div class="progress">
-                            <span class="bootstrap"></span>
+                            <span class="pyhton bounce"></span>
                         </div>
                     </div>
                 </div>
-                <div class="card mb-4">
+                <div class="card bounce mb-4">
                     <img src="/assets/img/js.png" class="card-img-top p-1" alt="...">
                     <div class="card-body">
                         <h2 class="card-title mb-3 text-center">JavaScript</h2>
                         <div class="progress">
-                            <span class="javascript"></span>
+                            <span class="javascript bounce"></span>
                         </div>
                     </div>
                 </div>
-                <div class="card mb-4">
+                <div class="card bounce mb-4">
                     <img src="/assets/img/php.png" class="card-img-top p-1" alt="...">
                     <div class="card-body">
                         <h2 class="card-title mb-3 text-center">PHP</h2>
                         <div class="progress">
-                            <span class="php"></span>
+                            <span class="php bounce"></span>
                         </div>
                     </div>
                 </div>
@@ -148,10 +155,13 @@
     <!-- section portofolio -->
     <section id="section-portofolio">
         <div class="portofolio">
-            <h2 class="heading">My&nbsp;<span>Project</span></h2>
+            <div class="hidden">
+                <h3 class="porto-txt">Portopolio</h3>
+                <h2 class="heading">My&nbsp;<span>Project</span></h2>
+            </div>
             <div class="container">
                 <div class="box box-1">
-                    <div class="cover">
+                    <div class="cover bounce">
                         <img src="/assets/img/project1.png" alt="...">
                         <div class="porto-content">
                             <h1>H3aling</h1>
@@ -163,7 +173,7 @@
                     </div>
                 </div>
                 <div class="box box-2">
-                    <div class="cover">
+                    <div class="cover bounce">
                         <img src="/assets/img/project2.png" alt="...">
                         <div class="porto-content">
                             <h1 style="color: white;">Memory Digital</h1>
@@ -174,7 +184,7 @@
                     </div>
                 </div>
                 <div class="box box-3">
-                    <div class="cover">
+                    <div class="cover bounce">
                         <img src="/assets/img/project3.jpg" alt="...">
                         <div class="porto-content">
                             <h1>Landing Pages</h1>
@@ -188,7 +198,7 @@
 
             <div class="container">
                 <div class="box box-4">
-                    <div class="cover">
+                    <div class="cover bounce">
                         <img src="/assets/img/project4.png" alt="...">
                         <div class="porto-content">
                             <h1>Landing Pages</h1>
@@ -199,7 +209,7 @@
                     </div>
                 </div>
                 <div class="box box-5">
-                    <div class="cover">
+                    <div class="cover bounce">
                         <img src="/assets/img/project6.png" alt="...">
                         <div class="porto-content">
                             <h1>Covid-19 Tracker</h1>
@@ -210,7 +220,7 @@
                     </div>
                 </div>
                 <div class="box box-6">
-                    <div class="cover">
+                    <div class="cover bounce">
                         <img src="/assets/img/project7.png" alt="...">
                         <div class="porto-content">
                             <h1>COnlin</h1>
@@ -226,7 +236,7 @@
     <!-- section contact -->
     <section id="section-contact">
         <div class="row contact">
-            <div class="contact-txt col-md-5">
+            <div class="contact-txt bounce col-md-5">
                 <h2 class="heading">Contact&nbsp;<span>Me</span></h2>
                 <h4>Feel free to contact me for any inquiries, collaborations, or opportunities.</h4>
                 <div class="list">
@@ -242,7 +252,7 @@
                 </div>
             </div>
 
-            <div class="contact-form col-md-6">
+            <div class="contact-form bounce col-md-6">
                 <form action="">
                     <input type="email" placeholder="Your Email" required>
                     <input type="name" placeholder="Your Subject" required>
@@ -255,7 +265,7 @@
 
     <!-- section footer -->
     <footer id="section-footer">
-        <div class="footer">
+        <div class="footer bounce">
             <p>Copy Right by Candra Dermawansyah</p>
             <div class="top">
                 <a href="#section-home"><i class='bx bx-up-arrow-alt'></i></a>
@@ -264,6 +274,7 @@
     </footer>
 
     <script src="/assets/js/index.js"></script>
+    <script src="/assets/js/scroll.js"></script>
 </body>
 
 </html>

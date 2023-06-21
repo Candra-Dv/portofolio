@@ -23,6 +23,19 @@ body {
   color: var(--text-color);
 }
 
+/* scroll padding */
+#section-about {
+  scroll-margin: 5rem;
+}
+
+#section-skill {
+  scroll-margin: 3rem;
+}
+
+#section-portofolio {
+  scroll-margin: 5rem;
+}
+
 /* section navbar */
 .navbar {
   position: fixed;
@@ -261,6 +274,14 @@ nav.sticky {
   text-align: center;
 }
 
+
+.about p{
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 span {
   color: var(--second-bg-color);
 }
@@ -294,6 +315,13 @@ span {
   border-bottom: 0.4rem solid var(--third-bg-color);
   border-left: 0.4rem solid var(--second-bg-color);
   border-right: 0.4rem solid var(--second-bg-color);
+  animation: aboutSpinner 8s linear infinite;
+}
+
+@keyframes aboutSpinner {
+  100%{
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 .about-content {
@@ -315,16 +343,34 @@ span {
 /* section skill */
 .skill {
   position: relative;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   background-color: var(--bg-color);
 }
 
-.skill .heading {
-  padding-top: 1.6rem;
-  padding-bottom: 1.4rem;
-  font-size: 2.4rem;
-  font-family: 'Bitter';
-  margin-bottom: 1rem;
+.skill p{
   text-align: center;
+  margin-bottom: 9px;
+  font-size: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.skill .heading {
+  font-size: 2.4rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.skill h3{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  width: 18rem;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: auto;
+  margin-bottom: 4rem;
 }
 
 .skill span {
@@ -335,13 +381,13 @@ span {
   display: flex;
   text-align: center;
   justify-content: center;
+  /* padding-bottom: 3rem; */
 }
 
 .skill .card {
   width: 12rem;
   padding: 1rem;
   margin: 0 auto;
-  /* margin-right: 1rem; */
   background-color: var(--bg-color);
   border: 6px solid var(--second-bg-color);
   box-shadow: 0 4px 8px rgb(0, 0, 0);
@@ -410,18 +456,18 @@ span {
   }
 }
 
-.progress .bootstrap {
-  width: 84%;
-  animation: bootstrap 3s;
+.progress .pyhton {
+  width: 60%;
+  animation: pyhton 3s;
 }
 
-@keyframes bootstrap {
+@keyframes pyhton {
   0% {
     width: 0;
   }
 
   100% {
-    width: 84%;
+    width: 60%;
   }
 }
 
@@ -457,14 +503,21 @@ span {
 
 /* Section Portofolio */
 .portofolio {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .portofolio .heading {
   font-size: 2.4rem;
   text-align: center;
   margin-bottom: 3rem;
+}
+
+.porto-txt{
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .portofolio p {
@@ -591,6 +644,7 @@ span {
 .contact-txt h4 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 16px;
+  font-weight: 400;
 }
 
 .list {
@@ -688,4 +742,38 @@ form textarea {
 .footer .top i:hover {
   background-color: var(--text-color);
   color: var(--second-bg-color);
+}
+
+/* animation scrooll */
+.hidden {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 1s, transform 1s;
+}
+
+.bounce{
+  opacity: 1;
+  transform: translateX(-100%);
+  transition: opacity 1s, transform 1s;
+}
+
+.show{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.card:nth-child(2){
+  transition-delay: 200ms;
+}
+
+.card:nth-child(3){
+  transition-delay: 400ms;
+}
+
+.card:nth-child(4){
+  transition-delay: 600ms;
+}
+
+.card:nth-child(5){
+  transition-delay: 800ms;
 }
